@@ -1,0 +1,51 @@
+* {
+    border: 0;
+    outline: 0;
+}
+
+body {
+    margin: 200px 400px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+input {
+    border-radius: 5px;
+    width: 200px;
+    /* height: 30px; */
+    padding: 10px;
+    display: block;
+    color: #90908a;
+    border: #90908a solid 1px;
+    position: absolute;
+}
+
+label {
+    color: #90908a;
+    position: absolute;
+    z-index: 1;
+    top: 9px;
+    left: 10px;
+    background-color: white;
+    padding: 0 5px;
+}
+
+input:focus + label {
+    color: #6B3C95;
+}
+input:focus + label,
+input:not(:placeholder-shown) + label  {
+    top: -11px;
+    left: 10px;
+    transition-duration: 0.4s;
+}
+
+input:focus {
+    border: #6B3C95 solid 1px;
+    color: #6B3C95;
+    transition-duration: 0.4s;
+}
